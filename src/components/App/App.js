@@ -10,7 +10,7 @@ import { TransactionHistory } from 'components/TransactionHistory/TransactionHis
 
 export const App = () => {
   return (
-    <Box bg="pageBgColor" pl={4} pr={4} pt={5} pb={5}>
+    <Box bg="pageBgColor" pl={4} pr={4} pt={5} pb={5} as="main">
       <Profile
         username={user.username}
         tag={user.tag}

@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import { Title, List, Item, Label, PercentTage } from './Statistics.styled';
 import { Box } from 'components/Box/Box';
-import { getRandomHexColor } from './colorSwitcher';
 
 export const Statistics = ({ stats, title }) => {
-  const bgColor = getRandomHexColor();
   return (
     <Box
-      width="300px"
+      width="334px"
       ml="auto"
       mr="auto"
       mb={6}
@@ -18,7 +16,7 @@ export const Statistics = ({ stats, title }) => {
       as="section"
     >
       {title && <Title>{title}</Title>}
-      <List style={{ backgroundColor: bgColor }}>
+      <List>
         {stats.map(({ label, percentage, id }) => (
           <Item key={id}>
             <Label>{label}</Label>

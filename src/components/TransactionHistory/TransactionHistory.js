@@ -3,9 +3,9 @@ import {
   Table,
   TableHead,
   Column,
-  Cell,
+  Row,
   TableColumn,
-  TableCell,
+  TableRow,
   TableBody,
 } from './TransactionHistory.styled';
 
@@ -14,18 +14,18 @@ export const TransactionHistory = ({ items }) => {
     <Table>
       <TableHead>
         <Column>
-          <Cell>Type</Cell>
-          <Cell>Amount</Cell>
-          <Cell>Currency</Cell>
+          <Row>Type</Row>
+          <Row>Amount</Row>
+          <Row>Currency</Row>
         </Column>
       </TableHead>
 
       <TableBody>
         {items.map(({ id, type, amount, currency }) => (
           <TableColumn key={id}>
-            <TableCell>{type}</TableCell>
-            <TableCell>{amount}</TableCell>
-            <TableCell>{currency}</TableCell>
+            <TableRow>{type}</TableRow>
+            <TableRow>{amount}</TableRow>
+            <TableRow>{currency}</TableRow>
           </TableColumn>
         ))}
       </TableBody>

@@ -15,7 +15,7 @@ export const Column = styled.tr`
   text-transform: uppercase;
 `;
 
-export const Cell = styled.th`
+export const Row = styled.th`
   color: ${p => p.theme.colors.white};
   padding-top: ${p => p.theme.space[4]}px;
   padding-bottom: ${p => p.theme.space[4]}px;
@@ -25,7 +25,7 @@ export const TableBody = styled.tbody`
   text-align: center;
 `;
 
-export const TableCell = styled.td`
+export const TableRow = styled.td`
   color: ${p => p.theme.colors.textColor};
   padding-top: ${p => p.theme.space[4]}px;
   padding-bottom: ${p => p.theme.space[4]}px;

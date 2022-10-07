@@ -1,12 +1,13 @@
 import { BsFillCircleFill } from 'react-icons/bs';
+
 import { Name, Status, Avatar } from './FriendListItem.styled';
 import PropTypes from 'prop-types';
 
-export const FriendListItem = ({ status, avatar, name }) => {
+export const FriendListItem = ({ active, avatar, name }) => {
   return (
     <>
       <Status>
-        <BsFillCircleFill style={{ color: status ? 'green' : 'red' }} />
+        <BsFillCircleFill style={{ color: active ? 'green' : 'red' }} />
       </Status>
       <Avatar src={avatar} alt={name} width="48" />
       <Name>{name}</Name>
@@ -14,7 +15,7 @@ export const FriendListItem = ({ status, avatar, name }) => {
   );
 };
 FriendListItem.propTypes = {
-  status: PropTypes.bool.isRequired,
+  active: PropTypes.bool.isRequired,
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };

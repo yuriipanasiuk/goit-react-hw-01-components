@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { getRandomHexColor } from './colorSwitcher';
 
 export const Title = styled.h2`
   text-transform: uppercase;
@@ -21,6 +22,7 @@ export const Item = styled.li`
   padding-bottom: ${p => p.theme.space[3]}px;
   padding-left: ${p => p.theme.space[3]}px;
   padding-right: ${p => p.theme.space[3]}px;
+  background-color: ${getRandomHexColor};
 
   :not(:last-child) {
     border-right: ${p => p.theme.borders.statCard};
