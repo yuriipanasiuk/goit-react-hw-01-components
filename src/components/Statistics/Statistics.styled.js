@@ -23,6 +23,7 @@ export const Item = styled.li`
   padding-left: ${p => p.theme.space[3]}px;
   padding-right: ${p => p.theme.space[3]}px;
   background-color: ${getRandomHexColor};
+  box-shadow: ${p => p.theme.shadows.insideShadow};
 
   :not(:last-child) {
     border-right: ${p => p.theme.borders.statCard};
